@@ -1,5 +1,6 @@
 package com.example.week7
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
@@ -28,6 +29,11 @@ class MainActivity : AppCompatActivity() {
                 itemAdapter.items = item
                 itemAdapter.notifyDataSetChanged()
             })
+        }
+
+        binding.button.setOnClickListener {
+            val intent: Intent = Intent(this, StudentsActivity::class.java)
+            startActivity(intent)
         }
 
     }

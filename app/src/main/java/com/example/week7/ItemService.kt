@@ -1,7 +1,9 @@
 package com.example.week7
 
+import retrofit2.http.GET
+
 interface ItemService {
-    @Get ("items")
-    suspend fun getAllItems (): List <Item>
+    @GET ("items")
+    suspend fun getAllItems (): List<Item>
 
 }
